@@ -2,23 +2,22 @@ package class6.problem1;
 
 public class MaxCounter {
 
-    private int count;
+    private int count = 0;
     private int max;
 
     public MaxCounter(int max){
         this.max = max;
-        this.count=0;
     }
 
-    class increment() {
-        if(max<count){
-            count += 1;
-        } else{
+    public void increment() {
+        if(count>=max){
             System.out.println("최대값을 초과할 수 없습니다.");
+            return;
         }
+        count ++;
     }
 
-    class getCount(count){
+    public int getCount(){
         return count;
     }
 }
